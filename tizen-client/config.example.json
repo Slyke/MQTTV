@@ -1,0 +1,51 @@
+{
+  "mqtt": {
+    "uri": "mqtts://mqtt.example.home:8883",
+    "clientId": "tv-samsung",
+    "username": "replace-with-mqtt-username",
+    "password": "replace-with-mqtt-password",
+    "baseTopic": "",
+    "keepAliveSeconds": 30,
+    "tls": {
+      "insecureSkipVerify": false,
+      "trustSystemCAs": true,
+      "caCertificatePem": ""
+    }
+  },
+  "tv": {
+    "driver": "samsung-tizen",
+    "host": "127.0.0.1",
+    "name": "Samsung TV",
+    "remoteName": "MQTTV",
+    "token": "",
+    "timeoutMs": 5000,
+    "applications": [
+      {
+        "name": "YouTube",
+        "id": "111299001912"
+      }
+    ]
+  },
+  "api": {
+    "passkey": "",
+    "bindAddress": "127.0.0.1",
+    "http": {
+      "enabled": false,
+      "port": 8788
+    },
+    "https": {
+      "enabled": false,
+      "port": 8789
+    },
+    "maxConnections": 16,
+    "maxWebSockets": 8,
+    "requestTimeoutMs": 20000
+  },
+  "service": {
+    "statePollSeconds": 5,
+    "stateHeartbeatSeconds": 60,
+    "stateRetain": true,
+    "deduplicationEntries": 256,
+    "maximumCommandAgeSeconds": 120
+  }
+}

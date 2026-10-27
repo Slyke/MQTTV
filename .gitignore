@@ -1,0 +1,26 @@
+.env
+config.local.json
+adb-keys/
+*.zip
+
+# Local credentials, identities and generated artifacts
+.env.*
+!.env.example
+*.local.json
+*.pem
+*.key
+*.keystore
+*.jks
+*.p12
+*.pfx
+node_modules/
+.runtime/
+.integration/
+__pycache__/
+*:Zone.Identifier
+
+# Combined Android/Tizen build outputs
+/dist/
+
+# Private notes, experiments and recovery backups
+/local-files/

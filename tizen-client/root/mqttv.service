@@ -1,0 +1,13 @@
+[Unit]
+Description=MQTTV MQTT and API service
+After=network.target
+[Service]
+Type=simple
+Environment=MQTTV_HOME=%h/share/MQTTV
+Environment=MQTTV_SERVICE_BOOT=systemd-user
+ExecStart=/bin/sh -c 'exec /usr/bin/node < "%h/share/MQTTV/bootstrap.js"'
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+[Install]
+WantedBy=default.target

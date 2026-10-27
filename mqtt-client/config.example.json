@@ -1,0 +1,53 @@
+{
+  "mqtt": {
+    "uri": "mqtts://mqtt.example.home:8883",
+    "clientId": "tv-living-room",
+    "username": "replace-with-mqtt-username",
+    "password": "replace-with-mqtt-password",
+    "keepAliveSeconds": 30,
+    "tls": {
+      "caFile": "",
+      "caCertificatePem": "",
+      "trustSystemCAs": true,
+      "insecureSkipVerify": true
+    },
+    "baseTopic": ""
+  },
+  "service": {
+    "startOnBoot": true,
+    "keepCpuAwake": true,
+    "keepWifiAwake": true,
+    "deduplicationEntries": 256,
+    "maximumCommandAgeSeconds": 120,
+    "statePollSeconds": 5,
+    "memoryChangeThresholdMb": 8,
+    "stateRetain": true,
+    "stateHeartbeatSeconds": 60
+  },
+  "tv": {
+    "baseUrl": "http://127.0.0.1",
+    "timeoutMs": 5000,
+    "driver": "sony-bravia",
+    "preSharedKey": "replace-with-tv-pre-shared-key",
+    "adb": {
+      "enabled": false,
+      "port": 5555,
+      "keyFile": "text-adbkey.pem"
+    }
+  },
+  "api": {
+    "passkey": "",
+    "bindAddress": "0.0.0.0",
+    "http": {
+      "enabled": true,
+      "port": 8788
+    },
+    "https": {
+      "enabled": false,
+      "port": 8789
+    },
+    "maxConnections": 16,
+    "maxWebSockets": 8,
+    "requestTimeoutMs": 20000
+  }
+}

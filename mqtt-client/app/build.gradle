@@ -1,0 +1,41 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'net.phoxis.tvmqtt'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'net.phoxis.tvmqtt'
+        minSdk 26
+        // Sideloaded application supporting Android 8+ TVs and Shield devices.
+        targetSdk 28
+        versionCode 22
+        versionName '0.1.0'
+    }
+    signingConfigs {
+        maintainedRelease {
+            if (System.getenv('MQTTV_KEYSTORE_FILE')) {
+                storeFile file(System.getenv('MQTTV_KEYSTORE_FILE'))
+                storePassword System.getenv('MQTTV_STORE_PASSWORD')
+                keyAlias System.getenv('MQTTV_KEY_ALIAS')
+                keyPassword System.getenv('MQTTV_KEY_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            if (System.getenv('MQTTV_KEYSTORE_FILE')) signingConfig signingConfigs.maintainedRelease
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lint { disable 'ExpiredTargetSdkVersion', 'OldTargetApi', 'ProtectedPermissions' }
+}
+dependencies {
+    implementation 'com.google.zxing:core:3.5.4'
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+}

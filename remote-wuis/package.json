@@ -1,0 +1,19 @@
+{
+  "name": "tv-remote-wuis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "api": "node api/app.mjs",
+    "mqtt": "node mqtt/app.mjs",
+    "check": "node --check server.mjs && node --check transports.mjs && node --check public/app.js",
+    "test:live": "node tools/smoke.mjs"
+  },
+  "dependencies": {
+    "mqtt": "5.16.1",
+    "ws": "8.22.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

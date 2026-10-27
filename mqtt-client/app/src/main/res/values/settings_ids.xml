@@ -1,0 +1,37 @@
+<resources>
+    <item name="shield_launch_access" type="id" />
+    <item name="shield_control_access" type="id" />
+    <item name="settings_save" type="id" />
+    <item name="settings_cancel" type="id" />
+    <item name="setting_tv_driver" type="id" />
+    <item name="setting_mqtt_uri" type="id" />
+    <item name="setting_mqtt_clientid" type="id" />
+    <item name="setting_mqtt_username" type="id" />
+    <item name="setting_mqtt_password" type="id" />
+    <item name="setting_mqtt_basetopic" type="id" />
+    <item name="setting_mqtt_tls_insecureskipverify" type="id" />
+    <item name="setting_mqtt_tls_trustsystemcas" type="id" />
+    <item name="setting_mqtt_tls_cafile" type="id" />
+    <item name="setting_mqtt_keepaliveseconds" type="id" />
+    <item name="setting_api_passkey" type="id" />
+    <item name="setting_api_bindaddress" type="id" />
+    <item name="setting_api_http_enabled" type="id" />
+    <item name="setting_api_http_port" type="id" />
+    <item name="setting_api_https_enabled" type="id" />
+    <item name="setting_api_https_port" type="id" />
+    <item name="setting_tv_baseurl" type="id" />
+    <item name="setting_tv_presharedkey" type="id" />
+    <item name="setting_tv_adb_enabled" type="id" />
+    <item name="setting_tv_adb_port" type="id" />
+    <item name="setting_tv_adb_keyfile" type="id" />
+    <item name="api_passkey_qr" type="id" />
+    <item name="api_passkey_regenerate" type="id" />
+    <item name="mqtt_password_qr" type="id" />
+    <item name="tv_psk_qr" type="id" />
+    <item name="https_public_qr" type="id" />
+    <item name="https_certificate_qr" type="id" />
+    <item name="https_regenerate" type="id" />
+    <item name="open_on_phone" type="id" />
+    <item name="shield_control_method" type="id" />
+    <item name="shield_volume_control" type="id" />
+</resources>

@@ -1,0 +1,11 @@
+.gradle/
+.android-sdk/
+**/build/
+local.properties
+config.local.json
+*.local.json
+broker-ca.pem
+*.keystore
+*.jks
+.integration/
+__pycache__/

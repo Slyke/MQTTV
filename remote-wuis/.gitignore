@@ -1,0 +1,5 @@
+node_modules/
+.pnpm-store/
+.runtime/
+config.local.json
+*.log

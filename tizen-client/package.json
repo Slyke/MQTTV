@@ -1,0 +1,22 @@
+{
+  "name": "mqttv-tizen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MQTTV on-device Samsung Tizen client",
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "build": "node tools/build.mjs",
+    "check": "node --check src/core.cjs && node --check src/samsung.cjs && node --check src/api.cjs && node --check src/runtime.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "mqtt": "4.3.8",
+    "node-forge": "1.4.1",
+    "ws": "7.5.11"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

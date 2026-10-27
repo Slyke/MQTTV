@@ -1,0 +1,48 @@
+{
+  "mqtt": {
+    "uri": "mqtts://mqtt.example.home:8883",
+    "clientId": "tv-living-room-shield",
+    "username": "replace-with-mqtt-username",
+    "password": "replace-with-mqtt-password",
+    "keepAliveSeconds": 30,
+    "tls": {
+      "caFile": "",
+      "caCertificatePem": "",
+      "trustSystemCAs": true,
+      "insecureSkipVerify": true
+    },
+    "baseTopic": ""
+  },
+  "service": {
+    "startOnBoot": true,
+    "keepCpuAwake": true,
+    "keepWifiAwake": true,
+    "deduplicationEntries": 256,
+    "maximumCommandAgeSeconds": 120,
+    "statePollSeconds": 5,
+    "memoryChangeThresholdMb": 8,
+    "stateRetain": true,
+    "stateHeartbeatSeconds": 60
+  },
+  "tv": {
+    "driver": "nvidia-shield",
+    "timeoutMs": 5000,
+    "controlMethod": "native",
+    "volumeControl": "system"
+  },
+  "api": {
+    "passkey": "",
+    "bindAddress": "0.0.0.0",
+    "http": {
+      "enabled": true,
+      "port": 8788
+    },
+    "https": {
+      "enabled": false,
+      "port": 8789
+    },
+    "maxConnections": 16,
+    "maxWebSockets": 8,
+    "requestTimeoutMs": 20000
+  }
+}

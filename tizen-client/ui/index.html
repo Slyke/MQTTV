@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1920"><title>MQTTV</title><link rel="stylesheet" href="style.css"></head>
+<body><main><header><span class="mark">MQTTV</span><h1>Connections</h1><p id="status" role="status">Starting settings service…</p></header>
+<form id="settings"><section><h2>MQTT</h2>
+<label>Broker URI<input id="mqtt-uri" placeholder="mqtts://broker.home:8883"></label>
+<label>Client ID<input id="mqtt-client" autocomplete="off"></label><label>Base topic<input id="mqtt-topic" placeholder="tvs/samsung-tv"></label>
+<label>Username<input id="mqtt-user" autocomplete="off"></label><label>Password<input id="mqtt-password" type="password" autocomplete="off"></label>
+<label class="check"><input id="mqtt-insecure" type="checkbox">Allow an unverified broker certificate</label></section>
+<section><h2>API</h2><label>API passkey<input id="api-passkey" type="password" autocomplete="off"></label>
+<label class="check"><input id="show-passwords" type="checkbox">Show passwords</label>
+<label>Listen address<input id="api-bind" placeholder="127.0.0.1"></label>
+<div class="row"><label class="check"><input id="api-http" type="checkbox">HTTP / WebSocket</label><label>Port<input id="api-http-port" type="number" min="1024" max="65535"></label></div>
+<div class="row"><label class="check"><input id="api-https" type="checkbox">HTTPS / WSS</label><label>Port<input id="api-https-port" type="number" min="1024" max="65535"></label></div></section>
+<section><h2>Samsung TV</h2><label>TV name<input id="tv-name"></label><p>Control runs on this television.</p>
+<button type="button" id="pair">Pair local control</button><button type="button" id="leave">Return to TV</button>
+<p class="hint">Open MQTTV once after a full restart to start the background service.</p></section>
+<footer><button type="submit" class="primary">Save &amp; apply</button><button type="button" id="start">Start</button><button type="button" id="stop">Stop</button></footer></form>
+<details><summary>Advanced options</summary>
+<h2>Samsung Tizen setup</h2>
+<p>This is the experimental Samsung Tizen package. Android APKs and Android Accessibility settings do not apply to this driver.</p>
+<p>For SDK sideloading: open the TV Apps screen and enter 12345, enable Developer Mode, set the development computer IP, then restart the TV. Menu availability varies by model. Use Tizen Studio to connect and install a WGT signed with a certificate accepted by that TV.</p>
+<p>The unsigned WGT is a build artifact, not a ready-to-install release. Physical-TV installation, runtime and standby behavior still require validation.</p>
+<p>After installation, open MQTTV, configure MQTT and/or the API, save, and allow local-control pairing if prompted. Normal transport code uses the TV runtime and local control APIs, not ADB. Reopen MQTTV after a full restart; automatic startup is not verified.</p>
+<p><a href="https://developer.samsung.com/smarttv/develop/getting-started/using-sdk/tv-device.html">Samsung TV device setup</a> &middot; <a href="https://developer.samsung.com/smarttv/develop/getting-started/setting-up-sdk/creating-certificates.html">Signing certificates</a></p>
+<details><summary>Advanced configuration</summary><p>Import or export the JSON configuration. Passwords are included in the JSON.</p><textarea id="json" rows="8"></textarea>
+<button type="button" id="load-json">Load JSON into form</button><button type="button" id="export-json">Show current JSON</button></details></details>
+</main><script src="app.js"></script></body></html>

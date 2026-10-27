@@ -1,0 +1,9 @@
+{
+  "tvConfigPath": "../mqtt-client/config.local.json",
+  "tvApiHost": "192.168.1.50",
+  "bindAddress": "127.0.0.1",
+  "apiPort": 8787,
+  "mqttPort": 8788,
+  "accessToken": "replace-with-random-remote-access-token",
+  "requireLogin": true
+}
